@@ -16,6 +16,11 @@ public class ConverterUnit {
 		return valueOfLength;
 	}
 	
-	
+	public void valueOfLengthIsLessThanOrEqualToZero() {
+		
+		if (valueOfLength <= 0) {
+			this.valueOfLength = 1;
+		}
+	}
 
 }

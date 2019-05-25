@@ -27,9 +27,19 @@ public class ConverterUnitTest {
 	public void valueOfLengthIsLessThanOrEqualToZeroTest_ShouldSetValueOfLengthOnOne_IfValueOfLengthIsLessThanOrEqualToZero() {
 	     
 		c2 = new ConverterUnit(0);
+		
 		c2.valueOfLengthIsLessThanOrEqualToZero();
 		
 		assertEquals(1, c2.getValueOfLength(), delta);
+	}
+	
+	@Test
+	public void fromKilogramsToPoundsTest_ShouldReturnValueInPounds_IfGivenAValueInKilograms() {
+	
+		double awaiting = c1.getValueOfLength() * 2.2046;
+		
+		assertEquals(22.046, c1.fromKilogramsToPounds(), delta);
+		
 	}
 	
 
