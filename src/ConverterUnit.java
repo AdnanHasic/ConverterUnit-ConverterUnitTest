@@ -11,6 +11,10 @@ public class ConverterUnit {
 		
 		this.valueOfLength = valueOfLength;
 	}
+
+	public double getValueOfLength() {
+		return valueOfLength;
+	}
 	
 	
 
