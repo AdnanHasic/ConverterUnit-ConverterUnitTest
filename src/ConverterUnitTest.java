@@ -66,5 +66,13 @@ public class ConverterUnitTest {
 		
 		assertEquals(awaiting, c1.fromInchesToCentimeters(), delta);
 	}
+	
+	@Test
+	public void fromCelsiusToFahrenheitTest_ShouldReturnValueInFahrenheit_IfGivenValueInCelsius() {
+		
+		double awaiting = (c1.getValueOfLength() * 1.8) + 32;
+		
+		assertEquals(awaiting, c1.fromCelsiusToFahrenheit(), delta);
+	}
 
 }
