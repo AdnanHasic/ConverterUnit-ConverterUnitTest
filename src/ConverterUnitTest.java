@@ -50,5 +50,13 @@ public class ConverterUnitTest {
 		assertEquals(awaiting, c1.fromPoundsToKilograms(), delta);
 	}
 	
+	@Test
+	public void fromCentimetersToInchesTest_ShouldReturnValueInInches_IfGivenValueInCentimeters() {
+		
+		double awaiting = c1.getValueOfLength() * 0.39370;
+		
+		assertEquals(awaiting, c1.fromCentimetersToInches(), delta);
+		
+	}
 
 }
