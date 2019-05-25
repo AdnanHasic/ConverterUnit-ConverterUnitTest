@@ -74,5 +74,13 @@ public class ConverterUnitTest {
 		
 		assertEquals(awaiting, c1.fromCelsiusToFahrenheit(), delta);
 	}
+	
+	@Test
+	public void fromFahrenheitToCelsiusTest_ShouldReturnValueInCelsius_IfGivenValueInFahrenheit() {
+		
+		double awaiting = (c1.getValueOfLength() * 1.8) + 32;
+		
+		assertEquals(awaiting, c1.fromFahrenheitToCelsius(), delta);
+	}
 
 }
