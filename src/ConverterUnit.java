@@ -33,5 +33,8 @@ public class ConverterUnit {
 		return this.valueOfLength / 2.2046;
 	}
 	
-	
+	public double fromCentimetersToInches() {
+		
+		return this.valueOfLength * 0.39370;
+	}
 }
