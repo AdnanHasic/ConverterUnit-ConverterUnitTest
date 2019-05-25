@@ -42,5 +42,13 @@ public class ConverterUnitTest {
 		
 	}
 	
+	@Test
+	public void fromPoundsToKilogramsTest_ShouldReturnValueInKilograms_IfGivenAValueInPounds() {
+		
+		double awaiting = c1.getValueOfLength() / 2.2046;
+		
+		assertEquals(awaiting, c1.fromPoundsToKilograms(), delta);
+	}
+	
 
 }
