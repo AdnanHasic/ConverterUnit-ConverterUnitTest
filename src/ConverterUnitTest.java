@@ -38,7 +38,7 @@ public class ConverterUnitTest {
 	
 		double awaiting = c1.getValueOfLength() * 2.2046;
 		
-		assertEquals(22.046, c1.fromKilogramsToPounds(), delta);
+		assertEquals(awaiting, c1.fromKilogramsToPounds(), delta);
 		
 	}
 	
