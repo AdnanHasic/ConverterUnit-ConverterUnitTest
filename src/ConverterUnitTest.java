@@ -58,5 +58,13 @@ public class ConverterUnitTest {
 		assertEquals(awaiting, c1.fromCentimetersToInches(), delta);
 		
 	}
+	
+	@Test
+	public void fromInchesToCentimetersTest_ShouldReturnValueInCentimeters_IfGivenValueIninches() {
+		
+		double awaiting = c1.getValueOfLength() / 0.39370;
+		
+		assertEquals(awaiting, c1.fromInchesToCentimeters(), delta);
+	}
 
 }
