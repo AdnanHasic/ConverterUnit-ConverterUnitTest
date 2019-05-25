@@ -8,20 +8,17 @@ public class ConverterUnit {
 	}
 
 	public ConverterUnit(double value) {
-		
+		if (value <= 0) {
+		this.value = 1;
+		} else {
 		this.value = value;
+		}
 	}
 
 	public double getValue() {
 		return value;
 	}
 	
-	public void valueIsLessThanOrEqualToZero() {
-		
-		if (value <= 0) {
-			this.value = 1;
-		}
-	}
 
 	public double fromKilogramsToPounds() {
 		

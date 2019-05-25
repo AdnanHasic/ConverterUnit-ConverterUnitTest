@@ -8,11 +8,15 @@ public class ConverterUnitTest {
 	ConverterUnit c1;
 	ConverterUnit c2;
 	double delta;
+	double value;
+	double value2;
 	
 	@Before
 	public void setUp() {
-		c1 = new ConverterUnit(10.0);
-		c2 = new ConverterUnit();
+		value = 10;
+		value2= 0;
+		c1 = new ConverterUnit(value);
+		c2 = new ConverterUnit(value2);
 		delta = 0.01;
 	}
 	
@@ -25,10 +29,6 @@ public class ConverterUnitTest {
 	
 	@Test
 	public void valueOfLengthIsLessThanOrEqualToZeroTest_ShouldSetValueOfLengthOnOne_IfValueOfLengthIsLessThanOrEqualToZero() {
-	     
-		c2 = new ConverterUnit(0);
-		
-		c2.valueIsLessThanOrEqualToZero();
 		
 		assertEquals(1, c2.getValue(), delta);
 	}
