@@ -42,4 +42,9 @@ public class ConverterUnit {
 		
 		return this.valueOfLength / 0.39370;
 	}
+	
+	public double fromCelsiusToFahrenheit() {
+		
+		return (this.valueOfLength * 1.8) + 32;
+	}
 }
