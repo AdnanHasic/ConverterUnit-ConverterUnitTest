@@ -19,7 +19,7 @@ public class ConverterUnitTest {
 	@Test
 	public void getValueOfLengthTest_ShouldReturnGetValueOfLength_IfCalledGetValueofLength() {
 		
-		assertEquals(10.0, c1.getValueOfLength(), delta);
+		assertEquals(10.0, c1.getValue(), delta);
 		
 	}
 	
@@ -28,15 +28,15 @@ public class ConverterUnitTest {
 	     
 		c2 = new ConverterUnit(0);
 		
-		c2.valueOfLengthIsLessThanOrEqualToZero();
+		c2.valueIsLessThanOrEqualToZero();
 		
-		assertEquals(1, c2.getValueOfLength(), delta);
+		assertEquals(1, c2.getValue(), delta);
 	}
 	
 	@Test
 	public void fromKilogramsToPoundsTest_ShouldReturnValueInPounds_IfGivenAValueInKilograms() {
 	
-		double awaiting = c1.getValueOfLength() * 2.2046;
+		double awaiting = c1.getValue() * 2.2046;
 		
 		assertEquals(awaiting, c1.fromKilogramsToPounds(), delta);
 		
@@ -45,7 +45,7 @@ public class ConverterUnitTest {
 	@Test
 	public void fromPoundsToKilogramsTest_ShouldReturnValueInKilograms_IfGivenAValueInPounds() {
 		
-		double awaiting = c1.getValueOfLength() / 2.2046;
+		double awaiting = c1.getValue() / 2.2046;
 		
 		assertEquals(awaiting, c1.fromPoundsToKilograms(), delta);
 	}
@@ -53,7 +53,7 @@ public class ConverterUnitTest {
 	@Test
 	public void fromCentimetersToInchesTest_ShouldReturnValueInInches_IfGivenValueInCentimeters() {
 		
-		double awaiting = c1.getValueOfLength() * 0.39370;
+		double awaiting = c1.getValue() * 0.39370;
 		
 		assertEquals(awaiting, c1.fromCentimetersToInches(), delta);
 		
@@ -62,7 +62,7 @@ public class ConverterUnitTest {
 	@Test
 	public void fromInchesToCentimetersTest_ShouldReturnValueInCentimeters_IfGivenValueIninches() {
 		
-		double awaiting = c1.getValueOfLength() / 0.39370;
+		double awaiting = c1.getValue() / 0.39370;
 		
 		assertEquals(awaiting, c1.fromInchesToCentimeters(), delta);
 	}
@@ -70,7 +70,7 @@ public class ConverterUnitTest {
 	@Test
 	public void fromCelsiusToFahrenheitTest_ShouldReturnValueInFahrenheit_IfGivenValueInCelsius() {
 		
-		double awaiting = (c1.getValueOfLength() * 1.8) + 32;
+		double awaiting = (c1.getValue() * 1.8) + 32;
 		
 		assertEquals(awaiting, c1.fromCelsiusToFahrenheit(), delta);
 	}
@@ -78,7 +78,7 @@ public class ConverterUnitTest {
 	@Test
 	public void fromFahrenheitToCelsiusTest_ShouldReturnValueInCelsius_IfGivenValueInFahrenheit() {
 		
-		double awaiting = (c1.getValueOfLength() * 1.8) + 32;
+		double awaiting = (c1.getValue() - 32) / 1.8;;
 		
 		assertEquals(awaiting, c1.fromFahrenheitToCelsius(), delta);
 	}

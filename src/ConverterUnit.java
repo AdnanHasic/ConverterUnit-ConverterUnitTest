@@ -1,50 +1,55 @@
 
 public class ConverterUnit {
 	
-	private double valueOfLength;
+	private double value;
 
 	public ConverterUnit() {
 		
 	}
 
-	public ConverterUnit(double valueOfLength) {
+	public ConverterUnit(double value) {
 		
-		this.valueOfLength = valueOfLength;
+		this.value = value;
 	}
 
-	public double getValueOfLength() {
-		return valueOfLength;
+	public double getValue() {
+		return value;
 	}
 	
-	public void valueOfLengthIsLessThanOrEqualToZero() {
+	public void valueIsLessThanOrEqualToZero() {
 		
-		if (valueOfLength <= 0) {
-			this.valueOfLength = 1;
+		if (value <= 0) {
+			this.value = 1;
 		}
 	}
 
 	public double fromKilogramsToPounds() {
 		
-		return this.valueOfLength * 2.2046;
+		return this.value * 2.2046;
 	}
 	
 	public double fromPoundsToKilograms() {
 		
-		return this.valueOfLength / 2.2046;
+		return this.value / 2.2046;
 	}
 	
 	public double fromCentimetersToInches() {
 		
-		return this.valueOfLength * 0.39370;
+		return this.value * 0.39370;
 	}
 	
 	public double fromInchesToCentimeters() {
 		
-		return this.valueOfLength / 0.39370;
+		return this.value / 0.39370;
 	}
 	
 	public double fromCelsiusToFahrenheit() {
 		
-		return (this.valueOfLength * 1.8) + 32;
+		return (this.value * 1.8) + 32;
+	}
+	
+	public double fromFahrenheitToCelsius() {
+		
+		return (this.value - 32) / 1.8;
 	}
 }
