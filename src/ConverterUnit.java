@@ -28,5 +28,8 @@ public class ConverterUnit {
 		return this.valueOfLength * 2.2046;
 	}
 	
-	
+	public double fromPoundsToKilograms() {
+		
+		return this.valueOfLength / 2.2046;
+	}
 }
